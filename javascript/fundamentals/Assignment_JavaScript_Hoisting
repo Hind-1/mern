@@ -1,0 +1,84 @@
+console.log(hello);                                   
+var hello = 'world';                                 
+// var hello 
+// console.log(hello); // logs undefined                             
+//////////////////////////////////
+                                        
+var needle = 'haystack'; // Initialize needle
+test(); 
+function test(){ 
+    var needle = 'magnet';   // Initialize needle
+    console.log(needle);  
+} 
+//////////////////////////////////
+                                        
+var brendan = 'super cool';  // Initialize brendan
+function print(){
+     brendan = 'only okay'; // assign brendan
+    console.log(brendan);
+}
+console.log(brendan); // print super cool
+//////////////////////////////////
+                                        
+var food = 'chicken'; // Initialize food
+console.log(food); // print chicken
+eat();
+function eat(){
+    food = 'half-chicken'; // assign food
+    console.log(food); // print half-chicken
+    var food = 'gone';// Initialize food
+
+}
+//////////////////////////////////
+                                            
+mean();// The variable mean got hoisted to the top,
+//and we tried to invoke it before we assigned the function to it.
+console.log(food); // undefined
+var mean = function() {
+    food = "chicken";
+    console.log(food);
+    var food = "fish";
+    console.log(food);
+}
+console.log(food);// undefined
+
+console.log(genre); // undefined
+var genre = "disco"; // Initiaize genre
+rewind(); 
+function rewind() {
+    genre = "rock";
+    console.log(genre); // print rock
+    var genre = "r&b";
+    console.log(genre); //print r&b
+}
+console.log(genre); // print disco
+                                        
+//////////////////////////////////
+dojo = "san jose"; // assign dojo 
+console.log(dojo); // print san jose 
+learn();
+function learn() {
+    dojo = "seattle"; 
+    console.log(dojo); // print seattle 
+    var dojo = "burbank"; // Initialize dojo 
+    console.log(dojo); // print burbank
+}
+console.log(dojo); //  print san joes
+//////////////////////////////////
+
+console.log(makeDojo("Chicago", 65)); // {name:Chicago,students:65, hiring :true}
+console.log(makeDojo("Berkeley", 0));
+function makeDojo(name, students){
+let dojo = {};
+    dojo.name = name;
+    dojo.students = students;
+    if(dojo.students > 50){
+        dojo.hiring = true;
+    }
+    else if(dojo.students <= 0){
+        dojo = "closed for now"; // Can't decleard cost 
+    }
+    return dojo;
+}
+
+
